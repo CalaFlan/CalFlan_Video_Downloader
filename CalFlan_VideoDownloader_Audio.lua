@@ -7,11 +7,12 @@ local ytdlp_path = script_dir .. "\\yt-dlp" -- Relative path to yt-dlp folder
 local ytdlp_exe = ytdlp_path .. "\\yt-dlp.exe"
 
 -- Settings
-local Download_format = '-f "bv[ext=webm]+ba[ext=m4a]" --restrict-filenames' -- Replace with your desired format options
+local Download_format = '-x --force-overwrites --audio-format wav --restrict-filename' -- Replace with your desired format options
 
 -- Get Directory
 local url = ""
 local download_Path = reaper.GetProjectPath("")-- Gets set to ReaProject Path, or Default recording path if project is not saved
+
 --
 local function Checkforytdlp()
     local file = io.open(ytdlp_exe, "r")
@@ -24,7 +25,7 @@ local function Checkforytdlp()
 end
 
 local function promptURL()
-    local retval, user_input = reaper.GetUserInputs("YouTube Downloader", 1, "Enter YouTube URL:, extrawidth=200",url)
+    local retval, user_input = reaper.GetUserInputs("Video Downloader", 1, "Enter Video URL:, extrawidth=200",url)
     if retval then
         url = user_input
     else
@@ -69,6 +70,7 @@ local function DownloadVideo()
     importVideo()
 end
 
+-- Body
 Checkforytdlp()
 promptURL()
 DownloadVideo()
