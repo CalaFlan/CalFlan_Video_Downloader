@@ -5,11 +5,11 @@ local script_dir = script_path:match("(.+)\\") or ""
 -- CHANGE ME
 local ytdlp_path = script_dir .. "\\yt-dlp" -- Relative path to yt-dlp folder
 local ytdlp_exe = ytdlp_path .. "\\yt-dlp.exe"
+
 -- Settings
-local Download_format = "-x --force-overwrites --audio-format wav" -- Replace with your desired format options
-local VideoDownload_format = '-f "bv[ext=webm]+ba[ext=m4a]" --restrict-filenames' -- Replace with your desired format options
-Download_format = VideoDownload_format
---
+local Download_format = '-f "bv[ext=webm]+ba[ext=m4a]" --restrict-filenames' -- Replace with your desired format options
+
+-- Get Directory
 local url = ""
 local download_Path = reaper.GetProjectPath("")-- Gets set to ReaProject Path, or Default recording path if project is not saved
 --
