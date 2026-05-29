@@ -17,8 +17,7 @@ More information and the download for on yt-dlp can be found here:
 
 [https://github.com/yt-dlp/yt-dlp]
 
-for ease of distribution the compiled .exe of yt-dlp is included
-
+For ease of distribution the compiled .exe of yt-dlp is included with this repo, but you can replace this with your own
 
 yt-dlp supports downloading form a wide range of websites, not just YouTube, including Vimeo, Twitch and many more, a full list of supported websites can be found here: 
 
@@ -29,4 +28,4 @@ Currently this version of the script only works on PC, primarily because it is t
 
 If you are a Mac or Linux user looking to use this script, I'd encourage you to fiddle around and try and get it working with this as a framework.
 
-I imagine you'll simply need to replace the .exe and the cmd line functions
+I imagine you'll simply need to replace the .exe and the cmd line functions with something appropriate for your machine
