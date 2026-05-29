@@ -13,6 +13,16 @@ Download_format = VideoDownload_format
 local url = ""
 local download_Path = reaper.GetProjectPath("")-- Gets set to ReaProject Path, or Default recording path if project is not saved
 --
+local function Checkforytdlp()
+    local file = io.open(ytdlp_exe, "r")
+    if file then
+        io.close(file)
+    else
+        reaper.ShowMessageBox("yt-dlp.exe not found at: \n" .. ytdlp_exe .. "\nPlease install yt-dlp", "Error, yt-dlp.exe missing", 0)
+        return
+    end
+end
+
 local function promptURL()
     local retval, user_input = reaper.GetUserInputs("YouTube Downloader", 1, "Enter YouTube URL:, extrawidth=200",url)
     if retval then
@@ -59,5 +69,6 @@ local function DownloadVideo()
     importVideo()
 end
 
+Checkforytdlp()
 promptURL()
 DownloadVideo()
