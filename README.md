@@ -1,4 +1,4 @@
-# Reaper Youtube Downloader:
+# Reaper YouTube Downloader:
 
 
 ## User Guide
@@ -17,10 +17,10 @@ More information and the download for on yt-dlp can be found here:
 
 [https://github.com/yt-dlp/yt-dlp]
 
-for ease of distrobution the compiled .exe of yt-dlp is included
+for ease of distribution the compiled .exe of yt-dlp is included
 
 
-yt-dlp supports downloading form a wide range of websites, not just youtube, including Viemo, Twitch and many more, a full list of supported websites can be found here: 
+yt-dlp supports downloading form a wide range of websites, not just YouTube, including Vimeo, Twitch and many more, a full list of supported websites can be found here: 
 
 [https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md]
 
