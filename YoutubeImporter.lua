@@ -1,10 +1,14 @@
+-- Get the script's directory to make paths relative to the script location
+local script_path = debug.getinfo(1).source:match("@(.*)") or ""
+local script_dir = script_path:match("(.+)\\") or ""
+
 -- CHANGE ME
-local ytdlp_path = "D:\\Projects\\_Reaper_Scripts\\Private\\WIP\\YoutubeImporter\\yt-dlp" -- Replace with your yt-dlp path, remember to use double backslashes in the path
+local ytdlp_path = script_dir .. "\\yt-dlp" -- Relative path to yt-dlp folder
 local ytdlp_exe = ytdlp_path .. "\\yt-dlp.exe"
 -- Settings
 local Download_format = "-x --force-overwrites --audio-format wav" -- Replace with your desired format options
 local VideoDownload_format = '-f "bv[ext=webm]+ba[ext=m4a]" --restrict-filenames' -- Replace with your desired format options
- Download_format = VideoDownload_format
+Download_format = VideoDownload_format
 --
 local url = ""
 local download_Path = reaper.GetProjectPath("")-- Gets set to ReaProject Path, or Default recording path if project is not saved
@@ -49,13 +53,9 @@ local function DownloadVideo()
         reaper.ShowMessageBox("yt-dlp.exe not found at: " .. ytdlp_exe, "Error", 0)
         return
     end
-    
-    -- Build the command to run yt-dlp with the specified options
-    local command = "cmd /c \"\"" .. ytdlp_exe .. "\" " .. Download_format .. " -P  \"" .. download_Path .. "\" \"" .. url .. "\" 2>&1\""
+    local command = "cmd /c \"\"" .. ytdlp_exe .. "\" " .. Download_format .. " -P  \"" .. download_Path .. "\" \"" .. url .. "\" 2>&1\"" -- Build the command to run yt-dlp with the specified options
     -- reaper.ShowConsoleMsg("Running command: " .. command .. "\n")
-    
-    -- Run the command 
-    os.execute(command)
+    os.execute(command) -- Run the command 
     importVideo()
 end
 
