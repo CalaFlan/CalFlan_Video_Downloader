@@ -2,8 +2,9 @@
 local ytdlp_path = "D:\\Projects\\_Reaper_Scripts\\Private\\WIP\\YoutubeImporter\\yt-dlp" -- Replace with your yt-dlp path, remember to use double backslashes in the path
 local ytdlp_exe = ytdlp_path .. "\\yt-dlp.exe"
 -- Settings
-local Download_format = "-x --force-overwrites --audio-format wav --restrict-filenames" -- Replace with your desired format options
-
+local Download_format = "-x --force-overwrites --audio-format wav" -- Replace with your desired format options
+local VideoDownload_format = '-f "bv[ext=webm]+ba[ext=m4a]" --restrict-filenames' -- Replace with your desired format options
+ Download_format = VideoDownload_format
 --
 local url = ""
 local download_Path = reaper.GetProjectPath("")-- Gets set to ReaProject Path, or Default recording path if project is not saved
