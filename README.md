@@ -1,5 +1,16 @@
 # Reaper YouTube Downloader:
 
+## Set up
+In order to use this script, you'll need to install yt-dlp and place the .exe into the "yt-dlp" folder as seen below
+
+<img width="224" height="122" alt="image" src="https://github.com/user-attachments/assets/f39c0dfd-074d-44f6-9528-80ecd9591fbe" />
+
+
+The yt-dlp git hub page can be found [here](https://github.com/yt-dlp/yt-dlp#installation)
+
+Or the .exe can be downloaded directly from [This Link](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.exe)
+
+For more information on yt-dlp, and why it is being used in this project, see the about yt-dlp section
 
 ## User Guide
 ### What's Included
@@ -17,12 +28,9 @@ The scripts are near identical, except for the arguments being passed to yt-dlp
 * Once the video is download is complete, the video will be imported into Reaper.  
 
 ## About yt-dlp
-This script works by using yt-dlp, a public domain, open source and feature rich command-line based video downloader.
+This script works by using yt-dlp, a public domain, open source and feature rich command-line based video downloader. 
 
 [More information and the download for on yt-dlp can be found here](https://github.com/yt-dlp/yt-dlp)
-
-For ease of distribution the compiled .exe of yt-dlp is included with this repo, but you can replace this with your own for the sake of security.
-Simply download the .exe from the [yt-dlp github page](https://github.com/yt-dlp/yt-dlp#release-files)
 
 yt-dlp and this script supports downloading form a wide range of websites, not just YouTube, including Vimeo, Twitch and many more:
 
