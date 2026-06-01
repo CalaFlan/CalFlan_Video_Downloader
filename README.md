@@ -7,7 +7,7 @@ Two scripts are included in this repo:
 * One script downloads video + audio, 
 * The other downloads only the extracted audio.
   
-The scripts are essentially identical, except for the arguments being passed to yt-dlp, which controls the types of files being created 
+The scripts are near identical, except for the arguments being passed to yt-dlp
 
 ### Step by Step
 * Upon using the script you'll be prompted for a video URL
