@@ -25,7 +25,7 @@ local function Checkforytdlp()
 end
 
 local function promptURL()
-    local retval, user_input = reaper.GetUserInputs("Video Downloader", 1, "Enter Video URL:, extrawidth=200",url)
+    local retval, user_input = reaper.GetUserInputs("Audio Downloader", 1, "Enter Video URL:, extrawidth=200",url)
     if retval then
         url = user_input
     else
