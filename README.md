@@ -4,7 +4,7 @@
 ## User Guide
 ### What's Included
 Two scripts are included in this repo: 
-* One script downloads video + audio, 
+* One script downloads video + audio. 
 * The other downloads only the extracted audio.
   
 The scripts are near identical, except for the arguments being passed to yt-dlp
