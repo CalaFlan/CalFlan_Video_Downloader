@@ -4,8 +4,7 @@
 ## User Guide
 * Upon using the script you'll be prompted for a video URL
 * Once you've pasted the URL, hit enter and the script will then open a command line and run yt-dlp with the appropriate arguments and begin downloading
-* The video will be downloaded to your projects media folder
-* If the project is unsaved, it will instead be saved to reaper default recording path
+* The video will be downloaded to your projects media folder, If the project is unsaved the default recording path will be used instead
 * Download progress will be displayed in the command line
 * Once the video is download is complete, the video will be imported from your media folder into Reaper.
 
