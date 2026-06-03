@@ -17,9 +17,10 @@ local function Checkforytdlp()
     local file = io.open(ytdlp_exe, "r")
     if file then
         io.close(file)
+        return(true)
     else
-        reaper.ShowMessageBox("yt-dlp.exe not found at: \n" .. ytdlp_exe .. "\nPlease install yt-dlp", "Error, yt-dlp.exe missing", 0)
-        return
+        reaper.ShowMessageBox("yt-dlp.exe not found at: \n\n" .. ytdlp_path .. "\n\nPlease install yt-dlp, See README.md For instructions", "Error, yt-dlp.exe missing", 0)
+        return(false)
     end
 end
 
@@ -69,6 +70,7 @@ local function DownloadVideo()
     importVideo()
 end
 
-Checkforytdlp()
-promptURL()
-DownloadVideo()
+if Checkforytdlp() then
+    promptURL()
+    DownloadVideo()
+end
