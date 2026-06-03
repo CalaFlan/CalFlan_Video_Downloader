@@ -1,4 +1,4 @@
-# Reaper YouTube Downloader:
+# Reaper Video Downloader:
 
 ## Set up
 In order to use this script, you'll need to install yt-dlp and place the .exe into the "yt-dlp" folder as seen below
