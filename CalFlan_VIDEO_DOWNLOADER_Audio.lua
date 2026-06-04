@@ -3,8 +3,8 @@ local script_path = debug.getinfo(1).source:match("@(.*)") or ""
 local script_dir = script_path:match("(.+)\\") or ""
 
 -- CHANGE ME
-local ytdlp_path = script_dir .. "\\yt-dlp" -- Relative path to yt-dlp folder
-local ytdlp_exe = ytdlp_path .. "\\yt-dlp.exe"
+-- local ytdlp_path = script_dir .. "\\yt-dlp" -- Relative path to yt-dlp folder
+local ytdlp_exe = script_dir .. "\\yt-dlp.exe"
 
 -- Settings
 local Download_format = '-x --force-overwrites --audio-format wav --restrict-filename' -- Replace with your desired format options

@@ -3,8 +3,8 @@ local script_path = debug.getinfo(1).source:match("@(.*)") or ""
 local script_dir = script_path:match("(.+)\\") or ""
 
 -- CHANGE ME
-local ytdlp_path = script_dir .. "\\yt-dlp" -- Relative path to yt-dlp folder
-local ytdlp_exe = ytdlp_path .. "\\yt-dlp.exe"
+-- local ytdlp_path = script_dir .. "\\yt-dlp" -- Relative path to yt-dlp folder
+local ytdlp_exe = script_dir .. "\\yt-dlp.exe"
 
 -- Settings
 local Download_format = '-f "bv[ext=webm]+ba[ext=m4a]" --restrict-filenames' -- Replace with your desired format options
@@ -19,7 +19,7 @@ local function Checkforytdlp()
         io.close(file)
         return(true)
     else
-        reaper.ShowMessageBox("yt-dlp.exe not found at: \n\n" .. ytdlp_path .. "\n\nPlease install yt-dlp, See README.md For instructions", "Error, yt-dlp.exe missing", 0)
+        reaper.ShowMessageBox("yt-dlp.exe not found at: \n\n" .. ytdlp_exe .. "\n\nPlease install yt-dlp, See README.md For instructions", "Error, yt-dlp.exe missing", 0)
         return(false)
     end
 end
