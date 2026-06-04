@@ -1,9 +1,10 @@
 # Reaper Video Downloader:
 
 ## Set up
-In order to use this script, you'll need to install yt-dlp and place the .exe into the "yt-dlp" folder as seen below
+In order to use this script, you'll need to install yt-dlp and place the .exe into the same folder as the installed scripts, as seen below
 
-<img width="224" height="122" alt="image" src="https://github.com/user-attachments/assets/f39c0dfd-074d-44f6-9528-80ecd9591fbe" />
+<img width="275" height="98" alt="image" src="https://github.com/user-attachments/assets/b32d2a1f-53bb-4ec7-901d-7cf4fd299485" />
+
 
 
 The yt-dlp git hub page can be found [here](https://github.com/yt-dlp/yt-dlp#installation)
